@@ -21,6 +21,18 @@ public:
 		c.nom = nom * b.nom;
 		return c;
 	}
+	Fraction div(Fraction b) {
+		Fraction c;
+		c.nom = nom * b.denom;
+		c.denom = denom * b.nom;
+		return c;
+	}
+	Fraction add(Fraction b) {
+		Fraction c;
+		c.denom = denom * b.denom;
+		c.nom = nom * b.denom;
+		return c;
+	}
 };
 int main() {
 	Fraction a;
